@@ -87,7 +87,7 @@
 <ul>
 <li>總碳排量（每日）：<strong>14,500 gCO₂</strong></li>
 <li>總能耗（每日）：<strong>29,800 Wh</strong></li>
-<li>每件產品總碳排量（五機台累加）：288 gCO₂ → 模擬值：349 gCO₂</li>
+<li><span id="carbon-summary">每件產品總碳排量（五機台累加）：288 gCO₂ → 模擬值：349 gCO₂</span></li>
 </ul>
 <footer>
       Powered by <strong>@SAVE 智慧能效管理系統</strong>
@@ -129,7 +129,7 @@ function updateDashboard() {
     }
   });
 
-  const summary = document.querySelector("ul li:nth-child(3)");
+  const summary = document.getElementById("carbon-summary");
   summary.innerHTML = "每件產品總碳排量（五機台累加）：288 gCO₂ → 模擬值：<strong>" + totalCarbon + "</strong> gCO₂";
 
   const tip = document.querySelector("p[style*='color']");
